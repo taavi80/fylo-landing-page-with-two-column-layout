@@ -293,15 +293,6 @@ footer > p a:focus {
 }
 
 @media (min-width: 900px) {
-  main {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-
-  header {
-    width: 100%;
-  }
   header,
   .sign-up,
   .more-info,
@@ -379,10 +370,6 @@ footer > p a:focus {
     width: 50%;
   }
 
-  picture {
-    margin-top: auto;
-  }
-
   .container-desaturated {
     background-color: var(--Desaturated-Blue);
   }
@@ -404,6 +391,7 @@ footer > p a:focus {
   }
 
   .container-dark {
+    height: 100vh;
     background-color: var(--Very-Dark-Blue);
   }
   .footer-container {
