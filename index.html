@@ -11,7 +11,6 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
     <title>Frontend Mentor | Fylo landing page with two column layout</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,359 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&family=Raleway:wght@400;700&display=swap"
       rel="stylesheet"
     />
-
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    /> -->
-
-    <!-- <link rel="stylesheet" href="css/index.css" /> -->
-
-    <style>
-      :root {
-        --Very-Dark-Blue: hsl(243, 87%, 12%);
-        --Desaturated-Blue: hsl(238, 22%, 44%);
-        --Bright-Blue: hsl(224, 93%, 58%);
-        --Moderate-Cyan: hsl(170, 45%, 43%);
-        --Light-Grayish-Blue: hsl(240, 75%, 98%);
-        --Light-Gray: hsl(0, 0%, 75%);
-      }
-
-      body {
-        font-family: "Open Sans", sans-serif;
-        margin: 0;
-      }
-      header,
-      .sign-up,
-      .more-info,
-      .early-access,
-      footer {
-        padding: 2rem;
-        text-align: center;
-      }
-
-      form input,
-      form button {
-        box-sizing: border-box;
-        width: 100%;
-        height: 40px;
-        padding: 0.6rem;
-        border: none;
-        border-radius: 3px;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-      }
-
-      header {
-        font-family: "Raleway", sans-serif;
-        font-size: 0.9rem;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      header img {
-        max-width: 65px;
-        height: auto;
-      }
-      header nav a {
-        text-decoration: none;
-        color: #000;
-        margin-right: 0.6rem;
-        transition: all 0.2s ease;
-      }
-      header nav a:hover,
-      header nav a:focus {
-        cursor: pointer;
-        color: var(--Bright-Blue);
-        text-decoration: underline;
-        text-underline-offset: 6px;
-      }
-      header nav a:nth-child(3) {
-        margin-right: 0;
-      }
-
-      .sign-up .sign-up-content-img img {
-        width: 90%;
-        margin-bottom: 2rem;
-      }
-
-      .sign-up h1 {
-        font-family: "Open Sans", sans-serif;
-        font-size: 1.4rem;
-        font-weight: 800;
-        line-height: 1.5;
-      }
-
-      .sign-up p {
-        max-width: 400px;
-        font-size: 0.9rem;
-        margin-bottom: 2rem;
-        margin-inline: auto;
-      }
-
-      .sign-up form {
-        margin-bottom: 3rem;
-      }
-
-      .sign-up form input {
-        margin-bottom: 1rem;
-      }
-      .sign-up form input::placeholder {
-        opacity: 0.3;
-      }
-      .sign-up form button {
-        background-color: var(--Bright-Blue);
-        color: #fff;
-        font-family: "Raleway", sans-serif;
-        font-size: 1rem;
-        font-weight: 700;
-        letter-spacing: 0.3px;
-        border: none;
-        transition: all 0.25s;
-      }
-      .sign-up form button:hover,
-      .sign-up form button:focus {
-        cursor: pointer;
-        background-color: hsl(224, 93%, 68%);
-      }
-
-      picture img {
-        width: 100%;
-        display: block;
-      }
-
-      .more-info {
-        background-color: #f8f8fe;
-      }
-      .more-info .more-info-img img {
-        width: 90%;
-        margin: 2rem 0 3rem;
-      }
-      .more-info h2 {
-        font-size: 1rem;
-      }
-      .more-info p.transf {
-        font-size: 0.9rem;
-        text-align: start;
-        transform: translateX(-9px);
-      }
-      .how-fylo-works {
-        display: flex;
-        justify-content: center;
-      }
-      .how-fylo-works > div {
-        display: flex;
-        align-items: center;
-        padding-bottom: 0.3rem;
-        border-bottom: 1px solid var(--Moderate-Cyan);
-      }
-      .how-fylo-works div:hover,
-      .how-fylo-works div:focus {
-        cursor: pointer;
-        opacity: 0.7;
-      }
-      .how-fylo-works a {
-        color: var(--Moderate-Cyan);
-        text-decoration: none;
-      }
-      .how-fylo-works img {
-        width: 25px;
-        transform: translateX(3px);
-      }
-      .card {
-        background-color: #fff;
-        font-size: 0.9rem;
-        text-align: start;
-        padding: 1.5rem 2rem;
-        border-radius: 3px;
-        box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.3);
-        margin: 3rem 0;
-      }
-      .card > img {
-        width: 18px;
-        height: 19px;
-      }
-      .card .card-review {
-        line-height: 1.6;
-        margin: 0;
-      }
-      .card .user {
-        display: flex;
-        align-items: center;
-      }
-      .card .user img {
-        width: 30px;
-        border-radius: 50%;
-        margin-right: 0.6rem;
-      }
-      .card .user p {
-        max-width: 123px;
-        font-size: 0.6rem;
-      }
-      .card .user p span {
-        font-size: 0.9rem;
-        font-weight: bold;
-      }
-
-      .early-access {
-        background-color: var(--Desaturated-Blue);
-        color: #fff;
-        text-align: center;
-      }
-      .early-access h2 {
-        font-family: "Raleway", sans-serif;
-        letter-spacing: 0.3px;
-      }
-      .early-access p {
-        letter-spacing: 0.1px;
-        line-height: 1.6;
-      }
-      .early-access form {
-        margin-bottom: 2rem;
-      }
-      .early-access form input {
-        margin: 0.6rem 0;
-      }
-      .early-access form input::placeholder {
-        opacity: 0.3;
-      }
-      .early-access form button {
-        background-color: var(--Bright-Blue);
-        color: #fff;
-        font-family: "Raleway", sans-serif;
-        font-weight: 700;
-        letter-spacing: 0.5px;
-        transition: all 0.25s;
-      }
-      .early-access form button:hover,
-      .early-access form button:focus {
-        cursor: pointer;
-        background-color: hsl(224, 93%, 68%);
-      }
-
-      footer {
-        background-color: var(--Very-Dark-Blue);
-        color: #fff;
-        text-align: start;
-      }
-      .footer-top,
-      .footer-center,
-      .footer-bottom {
-        margin-bottom: 4rem;
-      }
-      .footer-top > img {
-        width: 60%;
-        margin: 2rem 0;
-      }
-      .contact-phone,
-      .contact-email {
-        letter-spacing: 1px;
-        display: flex;
-        align-items: center;
-      }
-      .contact-phone img,
-      .contact-email img {
-        width: 20px;
-        margin-right: 1.6rem;
-      }
-      .footer-center div {
-        display: flex;
-        flex-direction: column;
-      }
-      .footer-center div:nth-child(1) {
-        margin-bottom: 3rem;
-      }
-      .footer-center div a {
-        text-decoration: none;
-        color: #fff;
-        margin-bottom: 1rem;
-      }
-      .footer-center div a:hover,
-      .footer-center div a:focus {
-        color: var(--Bright-Blue);
-      }
-      .footer-center div a:last-child {
-        margin-bottom: 0;
-      }
-      .footer-bottom {
-        text-align: center;
-      }
-      .footer-bottom svg {
-        width: 15px;
-        height: 15px;
-        fill: #fff;
-        padding: 0.3rem;
-        border: 1px solid #fff;
-        border-radius: 50%;
-        margin-right: 1rem;
-      }
-      .footer-bottom svg:hover {
-        fill: var(--Bright-Blue);
-        border: 1px solid var(--Bright-Blue);
-      }
-      footer > p {
-        font-size: 0.9rem;
-        text-align: center;
-        opacity: 0.3;
-      }
-      footer > p a {
-        color: #fff;
-        text-decoration: none;
-      }
-      footer > p a:hover,
-      footer > p a:focus {
-        text-decoration: underline;
-      }
-
-      @media (min-width: 900px) {
-        header,
-        .sign-up,
-        .more-info,
-        .early-access,
-        footer {
-          padding: 0 6rem 6rem;
-          text-align: start;
-        }
-        header {
-          padding-top: 6rem;
-        }
-        header img {
-          max-width: 100%;
-        }
-        header nav a {
-          margin-right: 3rem;
-          font-size: 1.2rem;
-        }
-
-        .sign-up-content {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        .sign-up-content div:nth-child(1) {
-          order: 2;
-        }
-        .sign-up-content .sign-up-content-img {
-          display: flex;
-          justify-content: end;
-        }
-        .sign-up h1 {
-          font-size: 2rem;
-        }
-        .sign-up p {
-          max-width: initial;
-          font-size: 1rem;
-        }
-        .sign-up form {
-          display: flex;
-        }
-        .sign-up form input {
-          margin-right: 1rem;
-        }
-        .sign-up form button {
-          width: 70%;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="css/main.css" />
   </head>
 
   <body>
@@ -388,147 +35,156 @@
       </header>
 
       <section class="sign-up">
-        <div class="sign-up-content">
-          <div class="sign-up-content-img">
-            <img src="images/illustration-1.svg" alt="" />
-          </div>
-          <div>
-            <h1>All your files in one secure location, accessible anywhere.</h1>
-            <p>
-              Fylo stores your most important files in one secure location.
-              Access them wherever you need, share and collaborate with friends,
-              family, and co-workers.
-            </p>
-            <form>
-              <input type="email" placeholder="Enter your email..." />
-              <button>Get Started</button>
-            </form>
-          </div>
+        <div class="sign-up-img">
+          <img src="images/illustration-1.svg" alt="" />
+        </div>
+        <div>
+          <h1>All your files in one secure location, accessible anywhere.</h1>
+          <p>
+            Fylo stores your most important files in one secure location. Access
+            them wherever you need, share and collaborate with friends, family,
+            and co-workers.
+          </p>
+          <form>
+            <input type="email" placeholder="Enter your email..." />
+            <button>Get Started</button>
+          </form>
         </div>
       </section>
 
       <picture>
-        <source
-          media="(max-width:991px)"
-          srcset="/images/bg-curve-mobile.svg"
-        />
+        <source media="(max-width:991px)" srcset="images/bg-curve-mobile.svg" />
         <source
           media="(min-width:992px)"
           srcset="/images/bg-curve-desktop.svg"
         />
-        <img src="/images/bg-curve-desktop.svg" alt="" />
+        <img src="images/bg-curve-desktop.svg" alt="" />
       </picture>
 
-      <section class="more-info">
-        <div class="more-info-img">
-          <img src="images/illustration-2.svg" alt="" />
-        </div>
-        <h2>Stay productive, wherever you are</h2>
-        <p class="transf">
-          Never let location be an issue when accessing your files. Fylo has you
-          covered for all of your file storage needs.
-        </p>
-        <p class="transf">
-          Securely share files and folders with friends, family and colleagues
-          for live collaboration. No email attachments required!
-        </p>
-        <div class="how-fylo-works">
-          <div>
-            <a href="#">See how Fylo works</a>
-            <img src="/images/icon-arrow.svg" alt="" />
+      <div class="container-grayish">
+        <section class="more-info">
+          <div class="more-info-img">
+            <img src="images/illustration-2.svg" alt="" />
           </div>
-        </div>
-        <div class="card">
-          <img class="card-quotes" src="/images/icon-quotes.svg" alt="" />
-          <p class="card-review">
-            Fylo has improved our team productivity by an order of magnitude.
-            Since making the switch our team has become a well-oiled
-            collaboration machine.
+          <div>
+            <h2>Stay productive, wherever you are</h2>
+            <p class="transf">
+              Never let location be an issue when accessing your files. Fylo has
+              you covered for all of your file storage needs.
+            </p>
+            <p class="transf">
+              Securely share files and folders with friends, family and
+              colleagues for live collaboration. No email attachments required!
+            </p>
+            <div class="how-fylo-works">
+              <div>
+                <a href="#">See how Fylo works</a>
+                <img src="/images/icon-arrow.svg" alt="" />
+              </div>
+            </div>
+            <div class="card">
+              <img class="card-quotes" src="/images/icon-quotes.svg" alt="" />
+              <p class="card-review">
+                Fylo has improved our team productivity by an order of
+                magnitude. Since making the switch our team has become a
+                well-oiled collaboration machine.
+              </p>
+              <div class="user">
+                <img
+                  class="user-avatar"
+                  src="images/avatar-testimonial.jpg"
+                  alt=""
+                />
+                <p><span>Kyle Burton</span> Founder & CEO, Huddle</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="container-desaturated">
+        <section class="early-access">
+          <div>
+            <h2>Get early access today</h2>
+            <p>
+              It only takes a minute to sign up and our free starter tier is
+              extremely generous. If you have any questions, our support team
+              would be happy to help you.
+            </p>
+          </div>
+
+          <form>
+            <input type="email" placeholder="email@example.com" />
+            <button>Get Started For Free</button>
+          </form>
+        </section>
+      </div>
+
+      <div class="container-dark">
+        <footer>
+          <div class="footer-container">
+            <div class="footer-top">
+              <img src="images/footer-logo.svg" alt="" />
+              <div class="contact-phone">
+                <img src="images/icon-phone.svg" alt="" />
+                <p>Phone: +1-543-123-4567</p>
+              </div>
+              <div class="contact-email">
+                <img src="images/icon-email.svg" alt="" />
+                <p>example@fylo.com</p>
+              </div>
+            </div>
+            <div class="footer-center">
+              <div>
+                <a href="#">About Us</a>
+                <a href="#">Jobs</a>
+                <a href="#">Press</a>
+                <a href="#">Blog</a>
+              </div>
+              <div>
+                <a href="#">Contact Us</a>
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+              </div>
+            </div>
+            <div class="footer-bottom">
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                  <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                  />
+                </svg>
+              </a>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                  />
+                </svg>
+              </a>
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                  <path
+                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <p>
+            Challenge by
+            <a
+              href="https://www.frontendmentor.io?ref=challenge"
+              target="_blank"
+              >Frontend Mentor</a
+            >. Coded by
+            <a href="https://www.frontendmentor.io/profile/taavi80">taavi80</a>.
           </p>
-          <div class="user">
-            <img
-              class="user-avatar"
-              src="images/avatar-testimonial.jpg"
-              alt=""
-            />
-            <p><span>Kyle Burton</span> Founder & CEO, Huddle</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="early-access">
-        <h2>Get early access today</h2>
-        <p>
-          It only takes a minute to sign up and our free starter tier is
-          extremely generous. If you have any questions, our support team would
-          be happy to help you.
-        </p>
-        <form>
-          <input type="email" placeholder="email@example.com" />
-          <button>Get Started For Free</button>
-        </form>
-      </section>
-
-      <footer>
-        <div class="footer-top">
-          <img src="images/footer-logo.svg" alt="" />
-          <div class="contact-phone">
-            <img src="images/icon-phone.svg" alt="" />
-            <p>Phone: +1-543-123-4567</p>
-          </div>
-          <div class="contact-email">
-            <img src="images/icon-email.svg" alt="" />
-            <p>example@fylo.com</p>
-          </div>
-        </div>
-        <div class="footer-center">
-          <div>
-            <a href="#">About Us</a>
-            <a href="#">Jobs</a>
-            <a href="#">Press</a>
-            <a href="#">Blog</a>
-          </div>
-          <div>
-            <a href="#">Contact Us</a>
-            <a href="#">Terms</a>
-            <a href="#">Privacy</a>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
-              <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-              <path
-                d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
-              />
-            </svg>
-          </a>
-          <a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-              <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-              <path
-                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
-              />
-            </svg>
-          </a>
-          <a href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-              <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-              <path
-                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-              />
-            </svg>
-          </a>
-        </div>
-
-        <p>
-          Challenge by
-          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-            >Frontend Mentor</a
-          >. Coded by
-          <a href="https://www.frontendmentor.io/profile/taavi80">taavi80</a>.
-        </p>
-      </footer>
+        </footer>
+      </div>
     </main>
   </body>
 </html>
