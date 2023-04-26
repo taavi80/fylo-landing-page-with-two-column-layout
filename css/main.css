@@ -12,6 +12,11 @@ body {
   margin: 0;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 form input,
 form button {
   box-sizing: border-box;
@@ -101,7 +106,6 @@ header nav a:last-child {
 }
 
 picture img {
-  width: 100%;
   display: block;
 }
 
