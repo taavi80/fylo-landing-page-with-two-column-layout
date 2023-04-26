@@ -182,9 +182,6 @@ picture img {
   font-weight: bold;
 }
 
-.container-desaturated {
-  background-color: var(--Desaturated-Blue);
-}
 .early-access {
   background-color: var(--Desaturated-Blue);
   color: #fff;
@@ -370,6 +367,9 @@ footer > p a:focus {
     width: 50%;
   }
 
+  .container-desaturated {
+    background-color: var(--Desaturated-Blue);
+  }
   .early-access div {
     width: 60%;
   }
@@ -388,6 +388,7 @@ footer > p a:focus {
   }
 
   .container-dark {
+    height: 100vh;
     background-color: var(--Very-Dark-Blue);
   }
   .footer-container {
