@@ -262,6 +262,9 @@ footer {
 .footer-bottom {
   text-align: center;
 }
+.footer-bottom a {
+  text-decoration: none;
+}
 .footer-bottom svg {
   width: 15px;
   height: 15px;
