@@ -373,6 +373,9 @@ footer > p a:focus {
   .container-desaturated {
     background-color: var(--Desaturated-Blue);
   }
+  .early-access {
+    padding: 6rem 0;
+  }
   .early-access div {
     width: 60%;
   }
