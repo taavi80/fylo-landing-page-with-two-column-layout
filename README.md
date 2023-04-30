@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](design/)
+![](design/fylo-landing-page-with-two-column-layout_desktop-design.png)
 
 
 ### Links
